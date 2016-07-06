@@ -1,0 +1,22 @@
+{
+  "name": "asb-uploader",
+  "version": "1.0.0",
+  "description": "Uploader script for the Azure Service Bus",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJBnjack/asb-uploader.git"
+  },
+  "author": "Johannes Bertens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DJBnjack/asb-uploader/issues"
+  },
+  "homepage": "https://github.com/DJBnjack/asb-uploader#readme",
+  "dependencies": {
+    "azure": "^0.10.6"
+  }
+}
