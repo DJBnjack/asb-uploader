@@ -1,12 +1,12 @@
 var azure = require('azure');
 
-var connStr = process.argv[3] || process.env.CONNECTION_STRING;
+var connStr = process.argv[2] || process.env.CONNECTION_STRING;
 if (!connStr) throw new Error('Must provide connection string');
-var topicName = 'abs-update';
 
-var messageBody = process.argv[2];
+var messageBody = process.argv[3];
 if (!messageBody) throw new Error('Must provide message to send') 
 
+var topicName = 'abs-update';
 console.log('Connecting to ' + connStr + ' topic ' + topicName);
 var serviceBusService = azure.createServiceBusService(connStr);
 
