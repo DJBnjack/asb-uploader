@@ -17,6 +17,9 @@ var queueOptions = {
 
 var message = {
     body: messageBody,
+    customProperties: {
+        message_number: process.argv[4]
+    }
 };
 
 serviceBusService.sendQueueMessage(queueName, message, function(error) {
