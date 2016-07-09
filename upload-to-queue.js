@@ -14,22 +14,13 @@ var queueOptions = {
     MaxSizeInMegabytes: '5120',
     DefaultMessageTimeToLive: 'PT14D'
 };
-serviceBusService.createQueueIfNotExists(queueName, queueOptions, function(error){
-    if(!error){
-        var message = {
-            body: messageBody,
-            customProperties: {
-                messagenumber: 0
-            }
-        };
 
-        serviceBusService.sendQueueMessage(queueName, message, function(error) {
-            if (error) {
-                console.log(error);
-            }
-        });    
-    } else {
-        console.log("Error: " + error);
+var message = {
+    body: messageBody,
+};
+
+serviceBusService.sendQueueMessage(queueName, message, function(error) {
+    if (error) {
+        console.log(error);
     }
-});
-
+});    
